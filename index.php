@@ -44,7 +44,7 @@ $mysql = new Database();
 		<!-- Block to add the new member -->
         	<?php
 
-        if (! empty($_POST['number_put']) && ! empty($_POST['name_put']) && ! empty($_POST['address_put']) && ! empty($_POST['phone_put'])) {
+        if (isset($_POST['number_put'])) {
             $number_put = $_POST['number_put'];
             $name_put = $_POST['name_put'];
             $address_put = $_POST['address_put'];
@@ -149,24 +149,24 @@ foreach ($mysql->Rows() as $row) {
 			</div>
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroup-sizing-default">Name</span>
+					<span class="input-group-text" id="inputGroup-sizing-default">Name*</span>
 				</div>
 				<input type="text" class="form-control" aria-label="name_put"
-					name="name_put" aria-describedby="inputGroup-sizing-default">
+					name="name_put" aria-describedby="inputGroup-sizing-default" required="required">
 			</div>
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+					<span class="input-group-text" id="inputGroup-sizing-default">Address*</span>
 				</div>
 				<input type="text" class="form-control" aria-label="address_put"
-					name="address_put" aria-describedby="inputGroup-sizing-default">
+					name="address_put" aria-describedby="inputGroup-sizing-default" required="required">
 			</div>
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
-					<span class="input-group-text" id="inputGroup-sizing-default">Phone</span>
+					<span class="input-group-text" id="inputGroup-sizing-default">Phone*</span>
 				</div>
 				<input type="number" class="form-control" aria-label="phone_put"
-					name="phone_put" aria-describedby="inputGroup-sizing-default">
+					name="phone_put" aria-describedby="inputGroup-sizing-default" required="required">
 			</div>
 			<br> <input class="btn btn-secondary btn-lg btn-block" type="submit"
 				value="Add Member">
