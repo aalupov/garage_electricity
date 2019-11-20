@@ -91,7 +91,7 @@ $result = $mysql->Rows();
 					<td><?php echo $row['salary']; ?></td>
 					<td><a class="btn btn-primary"
 						href="edit.php?data_id=<?php echo $row['id']; ?>" role="button">Edit</a></td>
-					<td><a class="btn btn-primary"
+					<td><a class="btn btn-danger"
 						href="member.php?id=<?php echo $id; ?>&index_id=<?php echo $row['id']; ?>"
 						role="button" onclick="return confirm('Are you sure?')">Remove</a></td>
 				</tr>
@@ -239,7 +239,7 @@ if (isset($_POST['year'])) {
 					<td><?php echo $salary; ?></td>
 					<td><a class="btn btn-primary"
 						href="edit.php?data_id=<?php echo $index_id; ?>" role="button">Edit</a></td>
-					<td><a class="btn btn-primary"
+					<td><a class="btn btn-danger"
 						href="member.php?id=<?php echo $id; ?>&index_id=<?php echo $index_id; ?>"
 						role="button" onclick="return confirm('Are you sure?')">Remove</a></td>
 				</tr>
