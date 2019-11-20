@@ -59,7 +59,7 @@ $tariff = 3.52;
 					<th scope="row"><?php echo $row['year']; ?></th>
 					<td><?php echo $row['quarter']; ?></td>
 					<td><?php echo $row['data']; ?></td>
-					<td><a class="btn btn-primary"
+					<td><a class="btn btn-danger"
 						href="general.php?index_id=<?php echo $row['id']; ?>"
 						role="button" onclick="return confirm('Are you sure?')">Remove</a></td>
 				</tr>
@@ -193,7 +193,7 @@ if (isset($_POST['year'])) {
 					<td><?php echo $data; ?></td>
 					<td><a class="btn btn-primary"
 						href="edit.php?general_id=<?php echo $index_id; ?>" role="button">Edit</a></td>
-					<td><a class="btn btn-primary"
+					<td><a class="btn btn-danger"
 						href="general.php?index_id=<?php echo $index_id; ?>"
 						role="button" onclick="return confirm('Are you sure?')">Remove</a></td>
 				</tr>
