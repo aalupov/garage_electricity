@@ -104,7 +104,7 @@ foreach ($mysql->Rows() as $row) {
 				<td><a href="tel:+7<?php echo $row["phone"]; ?>"><?php echo $row["phone"]; ?></a></td>
 				<td><a class="btn btn-primary"
 					href="edit.php?garage_id=<?php echo $row['id']; ?>" role="button" >Edit</a></td>
-				<td><a class="btn btn-primary"
+				<td><a class="btn btn-danger"
 					href="index.php?index_id=<?php echo $row['id']; ?>" role="button"
 					onclick="return confirm('Are you sure?')">Remove</a></td>
 				</tr>
